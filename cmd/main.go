@@ -45,6 +45,7 @@ func createCustomers(ctx context.Context, wg *sync.WaitGroup) {
 		case <-ctx.Done():
 			// recieved shop close signal
 			color.Cyan("Close signal recieved, stop creating customers...\n")
+			defer close(waitingChan)
 			defer wg.Done()
 			return
 		default:
