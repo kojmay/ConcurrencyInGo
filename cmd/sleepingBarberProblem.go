@@ -119,7 +119,8 @@ func clockTimer(cancel context.CancelFunc) {
 	cancel()
 	color.Red("Close signal prodcasted!!!")
 }
-func main() {
+
+func main2() {
 	// init barberChan
 	barberChan = make(chan *Barber, barberNum)
 	for i := 0; i < barberNum; i++ {
