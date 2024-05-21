@@ -9,9 +9,9 @@ services:
       - "5432:5432"
     restart: always
     environment:
-      - POOSTGRES_USER=postgres
-      - POOSTGRES_PASSWORD=password
-      - POSTGRES_DB=concurrency
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: concurrency
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/data
 
